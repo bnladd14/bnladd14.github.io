@@ -1,0 +1,22 @@
+.jumbotron {
+    background-color: gray;
+}
+
+#column {
+    max-width: 50%;
+}
+
+#logo {
+    width: 100%;
+    max-width: 250px;
+    padding-top: 20px;
+}
+
+.container {
+    max-width: 100%;
+    padding-bottom: 20px;
+}
+
+#img-link {
+    width: 50px;
+}
