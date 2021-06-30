@@ -1,37 +1,79 @@
 <!DOCTYPE html>
 <head>
-    <title>Brittany Ladd's Resume</title>
+    <title>Brittany Ladd</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet"  href="./static/styles/index.css">
+    <link rel='shortcut icon' type='image/x-icon' href='./static/favicon.ico' />
 </head>
 
-<body>
-    <center>
-        <div class="jumbotron jumbotron-fluid">
-            <div class="row container">
-                <div class="col-md-3 col-sm-12">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12" id="pic">
-                            <img id="logo" src="./static/logo.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-9 col-sm-12">
-                    <br>
-                    <h1 class="display-4">Brittany Ladd</h1>
-                    <p class="lead">This is my work-in-progress resume website! Thanks for stopping by!</p>
+<body style="background-color: #bfbfbf">
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-200px";
+          }
+        }
+    </script>
+
+    <div id="navbar">
+        <header class="p-3 text-white" id="navbar-header">
+            <div class="container" id="nav-container">
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" id="nav-logo-container" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                  <img id="nav-logo" src="./static/logo.png">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <li id="navbar-link-container"><a href="/" id="navbar-link" class="nav-link px-2">Home</a></li>
+                  <li id="navbar-link-container"><a href="#about" id="navbar-link" class="nav-link px-2">About Me</a></li>
+                  <li id="navbar-link-container"><a href="#education" id="navbar-link" class="nav-link px-2">Education</a></li>
+                  <li id="navbar-link-container"><a href="#work-experience" id="navbar-link" class="nav-link px-2">Work Experience</a></li>
+                  <li id="navbar-link-container-last"><a href="#skills" id="navbar-link" class="nav-link px-2">Skills</a></li>
+                </ul>
+            </div>
+          </header>
+    </div>
+
+    <div class="container my-5" id="box-container">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg" id="border-box">
+            <div class="column">
+                <img id="logo" src="./static/headshot.png">
+                <br>
+                <h1 class="display-4" id="heading-text">Brittany Ladd</h1>
+                <p class="lead">This is my work-in-progress resume website! Thanks for stopping by!</p>
+                <div class="button-class">
                     <!-- Source: https://uxwing.com/linkedin-round-icon/ -->
-                    <a class="btn btn-outline-dark" href="https://linkedin.com/in/brittany-ladd" role="button">
-                        <img id="img-link" src="./static/linkedin.png">
+                    <a class="btn" href="https://linkedin.com/in/brittany-ladd" role="button">
+                        <img id="linkedin-img-link" src="./static/linkedin.png">
                     </a>
                     <!-- Source: https://uxwing.com/github-icon/ -->
-                    <a class="btn btn-outline-dark" href="https://github.com/bnladd14" role="button">
-                        <img id="img-link" src="./static/github.png">
+                    <a class="btn" href="https://github.com/bnladd14" role="button">
+                        <img id="github-img-link" src="./static/github.png">
+                    </a>
+                    <!-- Source: https://uxwing.com/email-round-icon/ -->
+                    <a class="btn" href="mailto:brittanyladd14@gmail.com" role="button">
+                        <img id="email-img-link" src="./static/email.png">
                     </a>
                 </div>
+                <!-- Source: https://uxwing.com/double-arrow-bottom-icon/ -->
+                <a class="btn" href="#about" role="button">
+                    <img id="arrow-img-link" src="./static/down_arrow.png">
+                </a>
             </div>
         </div>
-    </center>
+      </div>
+
+    <a name="about"></a>
+    <div class="p-5 mb-4 bg-light">
+          <div class="container-fluid py-5" id="about-me-container">
+            <h1 class="display-4" id="heading-text">About Me</h1>
+            <p class="fs-4">Blah blah blah</p>
+          </div>
+        </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
