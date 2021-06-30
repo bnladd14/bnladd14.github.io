@@ -7,6 +7,8 @@
 </head>
 
 <body style="background-color: #bfbfbf">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
     <script>
         window.onscroll = function() {scrollFunction()};
 
@@ -14,34 +16,45 @@
           if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
             document.getElementById("navbar").style.top = "0";
           } else {
-            document.getElementById("navbar").style.top = "-200px";
+            document.getElementById("navbar").style.top = "-300px";
           }
         }
     </script>
 
-    <div id="navbar">
-        <header class="p-3 text-white" id="navbar-header">
-            <div class="container" id="nav-container">
-              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" id="nav-logo-container" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                  <img id="nav-logo" src="./static/logo.png">
-                </a>
+    <nav class="navbar navbar-light" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img id="nav-logo" src="./static/logo.png"></a>
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                  <li id="navbar-link-container"><a href="/" id="navbar-link" class="nav-link px-2">Home</a></li>
-                  <li id="navbar-link-container"><a href="#about" id="navbar-link" class="nav-link px-2">About Me</a></li>
-                  <li id="navbar-link-container"><a href="#education" id="navbar-link" class="nav-link px-2">Education</a></li>
-                  <li id="navbar-link-container"><a href="#work-experience" id="navbar-link" class="nav-link px-2">Work Experience</a></li>
-                  <li id="navbar-link-container-last"><a href="#skills" id="navbar-link" class="nav-link px-2">Skills</a></li>
-                </ul>
-            </div>
-          </header>
+          <div class="navbar-collapse show collapse" id="navbarsExample01">
+            <ul class="navbar-nav me-auto mb-2">
+                <li id="navbar-link-container" class="nav-item"><a href="#" id="navbar-link" class="nav-link px-2" >Home</a></li>
+                <li id="navbar-link-container" class="nav-item"><a href="#about" id="navbar-link" class="nav-link px-2">About Me</a></li>
+                <li id="navbar-link-container" class="nav-item"><a href="#skills" id="navbar-link" class="nav-link px-2">Skills</a></li>
+                <li id="navbar-link-container" class="nav-item"><a href="#education" id="navbar-link" class="nav-link px-2">Education</a></li>
+                <li id="navbar-link-container" class="nav-item"><a href="#work-experience" id="navbar-link" class="nav-link px-2">Work Experience</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-item')
+        const menuToggle = document.getElementById('navbarsExample01')
+        const bsCollapse = new bootstrap.Collapse(menuToggle)
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => { bsCollapse.toggle() })
+        })
+    </script>
+
 
     <div class="container my-5" id="box-container">
         <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg" id="border-box">
             <div class="column">
-                <img id="logo" src="./static/headshot.png">
+                <img id="headshot" src="./static/headshot.png">
                 <br>
                 <h1 class="display-4" id="heading-text">Brittany Ladd</h1>
                 <p class="lead">This is my work-in-progress resume website! Thanks for stopping by!</p>
@@ -69,13 +82,34 @@
 
     <a name="about"></a>
     <div class="p-5 mb-4 bg-light">
-          <div class="container-fluid py-5" id="about-me-container">
+        <div class="container-fluid py-5" id="about-me-container">
             <h1 class="display-4" id="heading-text">About Me</h1>
             <p class="fs-4">Blah blah blah</p>
-          </div>
         </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+    <a name="skills"></a>
+    <div class="p-5 mb-4 bg-light">
+        <div class="container-fluid py-5" id="about-me-container">
+            <h1 class="display-4" id="heading-text">Skills</h1>
+            <p class="fs-4">Blah blah blah</p>
+        </div>
+    </div>
+
+    <a name="education"></a>
+    <div class="p-5 mb-4 bg-light">
+        <div class="container-fluid py-5" id="about-me-container">
+            <h1 class="display-4" id="heading-text">Education</h1>
+            <p class="fs-4">Blah blah blah</p>
+        </div>
+    </div>
+
+    <a name="work-experience"></a>
+    <div class="p-5 mb-4 bg-light">
+        <div class="container-fluid py-5" id="about-me-container">
+            <h1 class="display-4" id="heading-text">Work Experience</h1>
+            <p class="fs-4">Blah blah blah</p>
+        </div>
+    </div>
 </body>
 </html>
