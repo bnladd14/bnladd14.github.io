@@ -9,6 +9,17 @@
 <body style="background-color: #bfbfbf">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-200px";
+          }
+        }
+    </script>
     <div w3-include-HTML="navbar.html"></div>
     <div w3-include-HTML="splash.html"></div>
     <div w3-include-HTML="about.html"></div>
@@ -17,6 +28,14 @@
     <div w3-include-HTML="portfolio.html"></div>
     <script>
     w3.includeHTML();
+    </script>
+    <script>
+        const navLinks = document.querySelectorAll('.nav-item')
+        const menuToggle = document.getElementById('navbarsExample01')
+        const bsCollapse = new bootstrap.Collapse(menuToggle)
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => { bsCollapse.toggle() })
+        })
     </script>
 </body>
 </html>
