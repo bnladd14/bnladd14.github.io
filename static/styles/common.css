@@ -3,5 +3,25 @@
 }
 
 #subheading-text {
-    font-size: calc(0.6rem + 1.5vw)
+    font-size: calc(1rem + 1vw);
+}
+
+#sub-subheading-text {
+    font-size: calc(0.9rem + 1vw);
+}
+
+#bold-body-text {
+    font-size: calc(0.7rem + 1vw);
+}
+
+#body-text {
+    font-size: calc(0.6rem + 1vw);
+    font-weight: 300;
+}
+
+#section-container {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
 }

@@ -1,0 +1,21 @@
+#principal {
+    border-style: 1px solid;
+    border-color: black;
+    width: 75%;
+    margin-left: 0;
+    background-color: #dedede;
+}
+
+#ara {
+    border-style: 1px solid;
+    border-color: black;
+    width: 75%;
+    margin-left: 25%;
+    background-color: #dedede;
+}
+
+#experience-box {
+    padding: 10px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
