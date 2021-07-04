@@ -1,0 +1,16 @@
+#progress-bar-style: {
+    height: 50px;
+}
+
+#prog-container {
+    padding-bottom: 10px;
+}
+
+.progress {
+    height: 25px;
+}
+
+.progress-bar {
+    font-size: 15px;
+    cursor: default;
+}

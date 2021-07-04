@@ -2,126 +2,17 @@
 <head>
     <title>Brittany Ladd</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet"  href="./static/styles/index.css">
     <link rel='shortcut icon' type='image/x-icon' href='./static/favicon.ico' />
+    {% include "stylesheets.html" %}
 </head>
-
 <body style="background-color: #bfbfbf">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <script>
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-          if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-            document.getElementById("navbar").style.top = "0";
-          } else {
-            document.getElementById("navbar").style.top = "-300px";
-          }
-        }
-    </script>
-
-    <nav class="navbar navbar-light" id="navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img id="nav-logo" src="./static/logo.png"></a>
-          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="navbar-collapse show collapse" id="navbarsExample01">
-            <ul class="navbar-nav me-auto mb-2">
-                <li id="navbar-link-container" class="nav-item"><a href="#" id="navbar-link" class="nav-link px-2" >Home</a></li>
-                <li id="navbar-link-container" class="nav-item"><a href="#about" id="navbar-link" class="nav-link px-2">About Me</a></li>
-                <li id="navbar-link-container" class="nav-item"><a href="#skills" id="navbar-link" class="nav-link px-2">Skills</a></li>
-                <li id="navbar-link-container" class="nav-item"><a href="#education" id="navbar-link" class="nav-link px-2">Education</a></li>
-                <li id="navbar-link-container" class="nav-item"><a href="#work-experience" id="navbar-link" class="nav-link px-2">Work Experience</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
-
-    <script>
-        const navLinks = document.querySelectorAll('.nav-item')
-        const menuToggle = document.getElementById('navbarsExample01')
-        const bsCollapse = new bootstrap.Collapse(menuToggle)
-        navLinks.forEach((l) => {
-            l.addEventListener('click', () => { bsCollapse.toggle() })
-        })
-    </script>
-
-
-    <div class="container my-5" id="box-container">
-        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg" id="border-box">
-            <div class="column">
-                <img id="headshot" src="./static/headshot.png">
-                <br>
-                <h1 class="display-4" id="heading-text">Brittany Ladd</h1>
-                <p class="lead">This is my work-in-progress resume website! Thanks for stopping by!</p>
-                <div class="button-class">
-                    <!-- Source: https://github.com/logos -->
-                    <a class="btn" href="https://github.com/bnladd14" role="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Visit my GitHub profile!">
-                        <img id="github-img-link" src="./static/GitHub-Mark-64px.png">
-                    </a>
-                    <!-- Source: https://uxwing.com/email-round-icon/ -->
-                    <a class="btn" href="mailto:brittanyladd14@gmail.com" role="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Email me!">
-                        <img id="email-img-link" src="./static/email.png">
-                    </a>
-                </div>
-                <!-- Source: https://uxwing.com/double-arrow-bottom-icon/ -->
-                <a class="btn" href="#about" role="button">
-                    <img id="arrow-img-link" src="./static/down_arrow.png">
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
-    </script>
-
-    <a name="about"></a>
-    <div class="p-5 mb-4 bg-light">
-        <div class="container-fluid py-5" id="about-me-container">
-            <h1 class="display-4" id="heading-text">About Me</h1>
-            <p class="fs-4">Blah blah blah</p>
-        </div>
-    </div>
-
-    <a name="skills"></a>
-    <div class="p-5 mb-4 bg-light">
-        <div class="container-fluid py-5" id="skills-container">
-            <h1 class="display-4" id="heading-text">Skills</h1>
-            <div class="container">
-              <div class="row align-items-start">
-                <div class="col" id="skills-column">
-                    <h1 class="display-8" id="subheading-text">Technical</h1>
-                </div>
-                <div class="col" id="skills-column">
-                    <h1 class="display-8" id="subheading-text">Other</h1>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
-
-    <a name="education"></a>
-    <div class="p-5 mb-4 bg-light">
-        <div class="container-fluid py-5" id="about-me-container">
-            <h1 class="display-4" id="heading-text">Education</h1>
-            <p class="fs-4">Blah blah blah</p>
-        </div>
-    </div>
-
-    <a name="work-experience"></a>
-    <div class="p-5 mb-4 bg-light">
-        <div class="container-fluid py-5" id="about-me-container">
-            <h1 class="display-4" id="heading-text">Work Experience</h1>
-            <p class="fs-4">Blah blah blah</p>
-        </div>
-    </div>
+    {% include "navbar.html" %}
+    {% include "splash.html" %}
+    {% include "about.html" %}
+    {% include "education.html" %}
+    {% include "experience.html" %}
+    {% include "portfolio.html" %}
 </body>
 </html>

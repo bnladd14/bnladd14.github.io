@@ -1,0 +1,41 @@
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-200px";
+      }
+    }
+</script>
+
+<nav class="navbar navbar-light" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img id="nav-logo" src="./static/logo.png"></a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="navbar-collapse show collapse" id="navbarsExample01">
+        <ul class="navbar-nav me-auto mb-2">
+            <li id="navbar-link-container" class="nav-item"><a href="#" id="navbar-link" class="nav-link px-2" >Home</a></li>
+            <li id="navbar-link-container" class="nav-item"><a href="#about" id="navbar-link" class="nav-link px-2">About</a></li>
+            <li id="navbar-link-container" class="nav-item"><a href="#education" id="navbar-link" class="nav-link px-2">Education</a></li>
+            <li id="navbar-link-container" class="nav-item"><a href="#work-experience" id="navbar-link" class="nav-link px-2">Work Experience</a></li>
+            <li id="navbar-link-container" class="nav-item"><a href="#portfolio" id="navbar-link" class="nav-link px-2">Portfolio</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<script>
+    const navLinks = document.querySelectorAll('.nav-item')
+    const menuToggle = document.getElementById('navbarsExample01')
+    const bsCollapse = new bootstrap.Collapse(menuToggle)
+    navLinks.forEach((l) => {
+        l.addEventListener('click', () => { bsCollapse.toggle() })
+    })
+</script>
+

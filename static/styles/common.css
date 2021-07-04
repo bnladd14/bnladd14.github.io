@@ -1,0 +1,7 @@
+#heading-text {
+    font-weight: 500;
+}
+
+#subheading-text {
+    font-size: calc(0.6rem + 1.5vw)
+}

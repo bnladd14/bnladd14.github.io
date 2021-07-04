@@ -1,0 +1,50 @@
+#headshot {
+    width: 100%;
+    max-width: 250px;
+    padding: 20px;
+}
+
+#email-img-link,
+#github-img-link {
+    width: 40px;
+}
+
+#github-img-link:hover,
+#email-img-link:hover {
+    /*  #5d0991  */
+    filter: invert(18%) sepia(94%) saturate(6150%) hue-rotate(276deg) brightness(59%) contrast(105%);
+}
+
+#arrow-img-link {
+    margin-bottom: 10px;
+    width: 25px;
+    filter: invert(40%) sepia(0%) saturate(0%) hue-rotate(262deg) brightness(89%) contrast(90%);
+}
+
+#arrow-img-link:hover {
+    filter: invert(85%) sepia(86%) saturate(6515%) hue-rotate(182deg) brightness(123%) contrast(99%);
+}
+
+#border-box {
+    background-color: #a3b4f0;
+}
+
+#box-container {
+    margin-top: 0;
+    text-align: center;
+    max-width: 80%;
+    padding-bottom: 20px;
+}
+
+.button-class {
+    margin-bottom: 20px;
+}
+
+hr {
+  border:none;
+  border-top:10px dotted black;
+  color:#fff;
+  background-color:#fff;
+  height:1px;
+}
+
