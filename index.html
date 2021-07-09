@@ -59,7 +59,37 @@
             }
         }
     </script>
-    <div w3-include-HTML="splash.html"></div>
+    <div class="container my-5" id="box-container">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg" id="border-box">
+            <div class="column">
+                <img id="headshot" src="./static/headshot.png">
+                <br>
+                <h1 class="display-4" id="heading-text">Brittany Ladd</h1>
+                <p class="lead">Software Engineer | Amateur Web Developer</p>
+                <div class="button-class">
+                    <!-- Source: https://github.com/logos -->
+                    <a class="btn" href="https://github.com/bnladd14" role="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Visit my GitHub profile!">
+                        <img id="github-img-link" src="./static/GitHub-Mark-64px.png">
+                    </a>
+                    <!-- Source: https://uxwing.com/email-round-icon/ -->
+                    <a class="btn" href="mailto:brittanyladd14@gmail.com" role="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Email me!">
+                        <img id="email-img-link" src="./static/email.png">
+                    </a>
+                </div>
+                <!-- Source: https://uxwing.com/double-arrow-bottom-icon/ -->
+                <a class="btn" href="#about" role="button">
+                    <img id="arrow-img-link" src="./static/down_arrow.png">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
     <div w3-include-HTML="about.html"></div>
     <a name="education"></a>
     <div class="p-5 mb-4 bg-light" id="big-ed-box">
